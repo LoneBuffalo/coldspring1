@@ -915,7 +915,7 @@
 								<cfcatch type="any">
 									<cfthrow type="coldspring.beanCreationException" 
 										message="Bean creation exception during init() of #beanDef.getBeanClass()#" 
-										detail="#cfcatch.message#:#cfcatch.detail#">
+										detail="<![DATA]#serializeJSON(cfcatch)#[DATA]>">
 								</cfcatch>
 							</cftry>
 						</cfif>
