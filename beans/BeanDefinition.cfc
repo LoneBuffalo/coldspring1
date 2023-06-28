@@ -570,7 +570,7 @@
 				</cfif>
 				<cfthrow type="coldspring.beanCreationException" 
 					message="Bean creation exception in #getBeanClass()#" 
-					detail="#cfcatch.message#:#cfcatch.detail#:#additionalInfo#">
+					detail="<![DATA]#serializeJSON(cfcatch)#[DATA]>">
 			</cfcatch>
 		</cftry>
 		
